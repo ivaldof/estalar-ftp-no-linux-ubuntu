@@ -1,0 +1,25 @@
+Instalação e Configuração do FTP no Ubuntu via VirtualBox
+
+iniciando
+no vitualbox muda de rede interna ou nat para modo bridg
+
+inicinado a vm vamos atualizar
+sudo apt-get update
+
+estalar o ftp
+sudo apt-get install vsftpd
+
+verificar se estalou
+sudo /etc/init.d/vsftpd status
+
+editar o arquivo /etc/vsftpd.conf para abilitar a escrita
+sudo /etc/vsftpd.conf
+Abilitar esse: write_enable=yes
+Salve o arquivo (Ctrl + O, Enter) e saia (Ctrl + X).
+
+recarregar o sistema
+sudo /etc/init.d/vsftpd restart
+
+agora etrar pelo explore do windows ja que o virtualbox taestalado no windows
+no nevegador do explore é so entrar ftp://192.168.0.10 esse é o ip da maquina
+que euquero ecessar via ftp coloco o "usuario" e "senha" pronto ja tenho ecesso.
